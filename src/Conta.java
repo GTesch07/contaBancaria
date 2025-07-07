@@ -2,14 +2,14 @@ public class Conta {
     private double saldo;
     private double chequeEspecial;
 
-    public Conta(double saldo, double chequeEspecial){
-        if (saldo <= 500){
-            chequeEspecial = 50;
-        }else if (saldo > 500) {
-            chequeEspecial = saldo * 0.5;
-        }
+    public Conta(double saldo){
         this.saldo = saldo;
-        this.chequeEspecial = chequeEspecial;
+        if (saldo <= 500){
+            this.chequeEspecial = 50;
+        }else if (saldo > 500) {
+            this.chequeEspecial = saldo * 0.5;
+        }
+      
     }
 
     public void consultarSaldo(){
@@ -45,6 +45,6 @@ public class Conta {
     }
 
     public void cobrarTaxaChequeEspecial(){
-        
+
     }
 }
