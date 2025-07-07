@@ -1,3 +1,4 @@
+package br.com.guilherme.tesch.models;
 public class Conta {
     private double saldo;
     private double chequeEspecial;
@@ -31,7 +32,7 @@ public class Conta {
             double restante = valor - saldo;
             saldo = 0;
             chequeEspecial -= restante;
-            System.out.println("Você usou R$ " + restante + " do cheque especial.");
+            System.out.println(String.format("Você usou R$ %.2f do cheque especial.",restante));
         }else{
             System.out.println("Saldo insuficiente, incluindo o limite do cheque especial.");
         }
